@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1164502E-5425-8C4A-86C8-029595AFDE36}</ProjectGuid>
+    <ProjectGuid>{6F9C0EDE-5CC5-3364-A702-C1C3F2135A93}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonUnityNetworking.Utilities</AssemblyName>
@@ -56,34 +56,34 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\OnPointerOverTooltip.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PlayerNumbering.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Room\CountdownTimer.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\ConnectAndJoinRandom.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnEscapeQuit.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickInstantiate.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullingHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\GraphicToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunTeams.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\ButtonInsideScrollList.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TabViewManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\StatesGui.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PhotonLagSimulationGui.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickRpc.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonView\SmoothSyncMovement.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullingHandler.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\MoveByKeys.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickDestroy.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PointedAtGameObjectInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Room\CountdownTimer.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\TurnBased\PunTurnManager.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickInstantiate.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\GraphicToggleIsOnTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PhotonStatsGui.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\ConnectAndJoinRandom.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunPlayerScores.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PointedAtGameObjectInfo.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickDestroy.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullArea.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\EventSystemSpawner.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextButtonTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\OnPointerOverTooltip.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnEscapeQuit.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunTeams.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PhotonTeamsManager.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnJoinedInstantiate.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\ButtonInsideScrollList.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PlayerNumbering.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TabViewManager.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\StatesGui.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\MoveByKeys.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PhotonStatsGui.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\EventSystemSpawner.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\TurnBased\PunTurnManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnStartDelete.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PhotonTeamsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonUnityNetworking.Utilities.asmdef" />
@@ -314,6 +314,9 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -326,14 +329,11 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -692,11 +692,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{69993407-5EC9-FE40-08A5-17BE5CEE8E5A}</Project>
+      <Project>{CFA08848-6547-DEDF-A8AA-920ED50B2A43}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{574C0832-8B90-3B5B-1FB4-DF8093D47C02}</Project>
+      <Project>{6E182CDD-E738-B9B6-6849-FC17F410E6A8}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
   </ItemGroup>
