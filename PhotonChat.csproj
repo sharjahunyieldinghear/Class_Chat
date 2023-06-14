@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4FB3ADA1-1480-962E-BA32-447C3F8FCB27}</ProjectGuid>
+    <ProjectGuid>{33E07287-F138-C1D2-6B1C-FDC5EF57BC96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonChat</AssemblyName>
@@ -56,19 +56,19 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatAppSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatParameterCode.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatUserStatus.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatPeer.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatState.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\IChatClientListener.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatPeer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonChat\Code\changes-chat.txt" />
@@ -300,6 +300,9 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -312,14 +315,11 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>

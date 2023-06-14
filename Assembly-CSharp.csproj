@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A7E3C9F7-E05A-BD6B-0A9D-3CEAFD8F7BF3}</ProjectGuid>
+    <ProjectGuid>{7C6308DB-4390-4D62-1D02-D2648C4E5BA1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,19 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
-    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Script\StartClass.cs" />
+    <Compile Include="Assets\Script\ConnectToServer.cs" />
+    <Compile Include="Assets\Script\JoinClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -333,11 +336,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
@@ -690,11 +693,14 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus">
-      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.dll</HintPath>
+    <Reference Include="Nobi.UiRoundedCorners">
+      <HintPath>Library\ScriptAssemblies\Nobi.UiRoundedCorners.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSystem">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Services.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Editor">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.SDK.Editor.dll</HintPath>
@@ -747,6 +753,9 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor.Interactive">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor.Interactive.dll</HintPath>
     </Reference>
@@ -770,6 +779,9 @@
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
@@ -825,11 +837,17 @@
     <Reference Include="Microsoft.MixedReality.Toolkit.Providers.OpenXR">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Providers.OpenXR.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Subsystem.Registration">
       <HintPath>Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nobi.UiRoundedCorners.Editor">
+      <HintPath>Library\ScriptAssemblies\Nobi.UiRoundedCorners.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -903,62 +921,53 @@
     <Reference Include="Unity.XR.ARFoundation">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors">
-      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.dll</HintPath>
+    <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{33E07287-F138-C1D2-6B1C-FDC5EF57BC96}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{43FD6D9D-2555-A8E4-C3CF-19497D206EE7}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{36B95DC8-E5BB-5E94-3196-88D2801F8297}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
+      <Project>{1E426573-DA0C-7C86-3CC0-E99C7FE73929}</Project>
+      <Name>PunDemos.DemoHubEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{574C0832-8B90-3B5B-1FB4-DF8093D47C02}</Project>
+      <Project>{5A6FC8A9-E77F-B79C-DBA7-A3B8D45D1EF1}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{76D9966F-6709-E80C-4D75-6852EF1E3AE5}</Project>
+      <Project>{608D98F0-C4BE-AA0D-0109-B4F4CD074D82}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{0DA36E25-DB31-2DE1-7D81-0B69B144DF03}</Project>
+      <Project>{A4189F26-A8BA-A875-227E-69B03CD28C7E}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{DD64263C-6B0D-6D9B-04B6-C55A3200BC76}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{1164502E-5425-8C4A-86C8-029595AFDE36}</Project>
+      <Project>{9B891867-DCDE-9FB9-33E6-2BABF563B1A3}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{45736FFC-073A-C6ED-E075-EC8A3F492483}</Project>
+      <Project>{9F528E3F-BFD8-EB99-C114-90D754ED0AE7}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{4FB3ADA1-1480-962E-BA32-447C3F8FCB27}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{E5476CF9-BDB6-05BD-4F62-F6AAC43A4F51}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{E1F65217-ED46-9D7A-1CB3-900357BB3843}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{2AC5CA6C-D8DD-1988-6058-D1304382418E}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{69993407-5EC9-FE40-08A5-17BE5CEE8E5A}</Project>
-      <Name>PhotonRealtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
